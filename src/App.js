@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import Posts from "./components/Post";
+import Postforms from "./components/Postforms";
 
 function App() {
   return (
@@ -12,6 +13,8 @@ function App() {
         <h5>Welcome to React</h5>
       </header>
 
+      <Postforms />
+      <hr />
       <Posts />
     </div>
   );
