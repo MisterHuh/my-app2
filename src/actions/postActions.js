@@ -31,3 +31,19 @@ export const fetchPosts = () => dispatch => {
       payload: posts // the payload will be reduced in the postReducers
     }));
 }
+
+export const createPost = (postData) => dispatch => {
+  console.log("fetching");
+  fetch('https://jsonplaceholder.typicode.com/posts', {
+    method: "POST",
+    headers: {
+      'content-type': 'application/json'
+    },
+    body: JSON.stringify(postData)
+  })
+    .then(res => res.json())
+    .then(post => dispatch({
+      type: NEW_POSTS,  // will dispatch NEW_POSTS to reducer (switch)
+      payload: postData // the payload will be reduced in the postReducers
+    }))
+}
