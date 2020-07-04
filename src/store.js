@@ -9,7 +9,8 @@ const middleware = [thunk];
 // const store = createStore(() => [], {}, applyMiddleware());
 const store = createStore(
   // rootReducer,
-  () => [],
+  // () => [],
+  combineReducers,
   initialState,
   applyMiddleware(...middleware)
 );

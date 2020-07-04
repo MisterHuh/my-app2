@@ -23,6 +23,7 @@ import { FETCH_POSTS, NEW_POSTS } from "./types";
 /* after es6 magic */
 /* same thing as above, but in a cleanr way */
 export const fetchPosts = () => dispatch => {
+  console.log("fetching");
   fetch("https://jsonplaceholder.typicode.com/posts")
     .then(res => res.json())
     .then(posts => dispatch({
