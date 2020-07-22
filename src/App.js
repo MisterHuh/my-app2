@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Provider } from "react-redux";
@@ -9,6 +10,7 @@ import Postforms from "./components/Postforms";
 import store from "./store";
 
 
+/* this is for redux */
 function App() {
   return (
     <Provider store={store}>
@@ -26,5 +28,20 @@ function App() {
     </Provider>
   );
 }
+
+/* pagination, but need to use Hooks and Axios */
+// const App = () => {
+//   const [posts, setPosts] = useState([]);
+//   const [loading, setLoading] = useState(false);
+//   const [currentPage, setCurrentPage] = useState(1);
+//   const [postPerPage, setPostsPerPage] = useState(10);
+
+
+//   return(
+//     <div className="container">
+//       <h1>My App</h1>
+//     </div>
+//   )
+// }
 
 export default App;
