@@ -5,12 +5,12 @@ import { fetchPosts } from '../actions/postActions';
 
 const FunctionalPost = (postItems) => {
 
-  // const items = postItems.map(post => (
-  //   <div key={post.id}>
-  //     <h3>{post.title}</h3>
-  //     <p>{post.body}</p>
-  //   </div>
-  // ))
+  const items = postItems.map(post => (
+    <div key={post.id}>
+      <h3>{post.title}</h3>
+      <p>{post.body}</p>
+    </div>
+  ))
 
   return (
     <div>
@@ -20,8 +20,9 @@ const FunctionalPost = (postItems) => {
   )
 }
 
-const mapStateToProps = (state) => ({
-  posts: state.posts.items
-})
+function mapStateToProps (state) {
+  console.log("map state to propping");
+  return { posts: state.posts.items }
+}
 
 export default connect(mapStateToProps, { fetchPosts })(FunctionalPost);
