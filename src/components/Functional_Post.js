@@ -3,25 +3,25 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { fetchPosts } from '../actions/postActions';
 
-export const FunctionalPost = () => {
+const FunctionalPost = (posts) => {
 
-  const posts = [
-    {
-      id: 1,
-      title: "title1",
-      body: "body1"
-    },
-    {
-      id: 2,
-      title: "title2",
-      body: "body2"
-    },
-    {
-      id: 3,
-      title: "title3",
-      body: "body3"
-    }
-  ]
+  // const posts = [
+  //   {
+  //     id: 1,
+  //     title: "title1",
+  //     body: "body1"
+  //   },
+  //   {
+  //     id: 2,
+  //     title: "title2",
+  //     body: "body2"
+  //   },
+  //   {
+  //     id: 3,
+  //     title: "title3",
+  //     body: "body3"
+  //   }
+  // ]
 
   const items = posts.map(post => (
     <div key={post.id}>
@@ -39,6 +39,14 @@ export const FunctionalPost = () => {
     </div>
   )
 }
+
+const test = connect(
+  state => ({
+    posts: state.posts.items
+  })
+)(FunctionalPost)
+
+export default test;
 
 // function mapStateToProps (state) {
 //   console.log("map state to propping");
