@@ -9,7 +9,7 @@ import Postforms from "./components/Postforms";
 
 import store from "./store";
 
-import FunctionalPost from "./components/Functional_Post";
+import { FunctionalPost } from "./components/Functional_Post";
 
 
 /* this is for redux */
