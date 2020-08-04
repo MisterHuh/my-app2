@@ -9,6 +9,8 @@ import Postforms from "./components/Postforms";
 
 import store from "./store";
 
+import FunctionalPost from "./components/Functional_Post";
+
 
 /* this is for redux */
 function App() {
@@ -23,7 +25,8 @@ function App() {
 
         <Postforms />
         <hr />
-        <Posts />
+        {/* <Posts /> */}
+        <FunctionalPost />
       </div>
     </Provider>
   );
